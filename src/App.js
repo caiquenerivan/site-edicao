@@ -7,7 +7,6 @@ import { GlobalStyle } from "./Components/GlobalStyle";
 import SwitcherTema from "./Components/SwitcherTema";
 import { BtnTema } from "./Components/UI";
 
-import Menu from "./Components/menu";
 
 function App() {
 
@@ -24,6 +23,7 @@ function App() {
     <ThemeProvider theme={(tema) ? temaClaro : temaEscuro}>
       
       <GlobalStyle />
+
       <BtnTema onClick={toggleTema}>
         <SwitcherTema tema={tema} />
       </BtnTema>
