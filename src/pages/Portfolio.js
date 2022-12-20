@@ -1,12 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import { Box, Titulo, SubTitulo, TituloDiv } from "../Components/UI";
+import CardPortfolio from "../Components/CardPortfolio";
+import { Box, Titulo, ContentBox } from "../Components/UI";
+
 
 export default function Portfolio() {
     return (
         <Box>
             <Titulo>Portfolio</Titulo>
-
+            <ContentBox>
+                <CardPortfolio/>
+            </ContentBox>
         </Box>
     );
 }

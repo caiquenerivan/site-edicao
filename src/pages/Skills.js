@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, Titulo, SubTitulo, TituloDiv } from "../Components/UI";
+import CardSkills from "../Components/CardSkills";
+import { Box, Titulo } from "../Components/UI";
 
-export default function Skills(){
-    return(
+export default function Skills() {
+    return (
         <Box>
             <Titulo>Skills</Titulo>
+
+            <CardSkills/>
+
         </Box>
     );
 }

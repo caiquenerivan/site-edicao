@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Box, Titulo, SubTitulo, TituloDiv } from "../Components/UI";
 import ReactPlayer from "react-player";
+import { corPrimaria } from "../Components/UI/variaveis";
 
 
 const VideoBox = styled.div`
     width: 960px;
     height: 540px;
     margin-top: 2em;
-    border: 5px solid #FF969670;
+    border: 5px solid ${corPrimaria};
     -webkit-box-shadow: 9px 7px 5px #F5F2F210;
     -moz-box-shadow:    9px 7px 5px #F5F2F210;
     box-shadow:         9px 7px 5px #F5F2F210;
