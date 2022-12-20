@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Box, Titulo, Texto, Content, ContentBox } from "../Components/UI";
 import eu from "../assets/images/eu.jpg"
+import { corPrimaria } from "../Components/UI/variaveis";
 
 
 const ImageBox = styled.div`
@@ -14,6 +15,7 @@ const Imagem = styled.img`
     border-radius: 50%;
     height: 100%;
     width: 100%;
+    border: 5px solid ${corPrimaria};
 `;
 
 
