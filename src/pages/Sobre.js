@@ -9,6 +9,9 @@ const ImageBox = styled.div`
     height: 20em;
     width: 20em;
     margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const Imagem = styled.img`
@@ -16,6 +19,7 @@ const Imagem = styled.img`
     height: 100%;
     width: 100%;
     border: 5px solid ${corPrimaria};
+
 `;
 
 

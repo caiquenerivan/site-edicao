@@ -14,8 +14,13 @@ const Span = styled.span`
 const TextBox = styled.div`
     display: flex;
     flex-direction: column;
-    padding-top: 7em;
-    width: 90vh;
+    
+    @media (min-width: 768px){
+        width: 90vh;
+        
+
+    }
+    width: 90%;
     justify-content: space-around;
 
     a:hover{
@@ -40,7 +45,7 @@ export default function Contato(){
                 </Texto>
                 <Texto>
                     <Span>Youtube: </Span>
-                    <a href="https://www.youtube.com/channel/UCgh4q2wd2vz2_mw5Z3-nDyg" target="_blank">https://www.youtube.com/channel/craquenerivan</a>
+                    <a href="https://www.youtube.com/channel/UCgh4q2wd2vz2_mw5Z3-nDyg" target="_blank">youtube.com/craquenerivan</a>
                 </Texto>
 
                 

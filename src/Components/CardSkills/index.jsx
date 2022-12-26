@@ -24,7 +24,11 @@ const Card = styled.div`
     height: 541px;
     border: 5px solid ${corPrimaria};
     text-transform: uppercase;
+    
     margin: 50px 0;
+    @media (min-width: 1300px){
+
+    }
     
     .borda{
         border-bottom: 5px solid ${corPrimaria};
@@ -50,6 +54,12 @@ const CarouselSkillsSection = styled.div`
     .slick-next:before {
         color: ${corPrimaria};
     }
+
+    .slider{
+        justify-content: space-between;
+        align-items: center;
+    }
+    width: 80%;
     max-width: 1200px;
 `;
 
@@ -63,7 +73,7 @@ export default function CardSkills() {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1000,
+                breakpoint: 1300,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -72,7 +82,7 @@ export default function CardSkills() {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -88,7 +98,7 @@ export default function CardSkills() {
         <CarouselSkillsSection>
 
 
-            <Slider {...settings} >
+            <Slider {...settings}  className="slider">
                 {dataSkills.map((item) => (
                     <Card>
                         <ReactPlayer

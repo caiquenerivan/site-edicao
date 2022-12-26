@@ -8,6 +8,9 @@ import { corPrimaria } from "../UI/variaveis";
 
 const PortfolioSection = styled.div`
     max-width: 1200px;
+    width: 100%;
+
+    align-items: center;
     .slick-dots li.slick-active button:before {
         color:${corPrimaria} !important;
     }
@@ -15,35 +18,63 @@ const PortfolioSection = styled.div`
     .slick-next:before {
         color: ${corPrimaria};
     }
+
 `;
 
 const PortfolioContent = styled.div`
-    max-width: 50%;
-    width: 50%;
+    width: 100%;
 
-    padding-right: 3em;
+    @media (min-width: 1300px){
+        max-width: 50%;
+        width: 50%
+        padding-right: 3em;
+    }
+
+    margin: 0;
+
+
 `;
 
 const ItemPortfolio = styled.div`
     display: flex;
-    padding: 3em;
+    flex-direction: column;
+    align-item: center;
+    
+    @media (min-width: 1300px){
+        padding: 3em;
+        flex-direction: row;
+
+    }
 `;
 
 const DescProjeto = styled.p`
     font-size: 1.4em;
     font-weight: 300;
     color: ${({ theme }) => theme.text};
+    text-align: center;
 `;
 
 const VideoBox = styled.div`
     border: 5px solid ${corPrimaria};
-    width: 50%;
+    width: 100%;
+    margin: 1em 0;
+
+    @media (min-width: 1300px){
+        max-width: 50%;
+        margin: 1em;
+    }
+`;
+
+const Width = styled.div`
+
 `;
 
 const TituloDesc = styled.h2`
     color: ${corPrimaria};
     text-transform: uppercase;
-    margin-bottom: 2em;
+    margin: 1em 0;
+    text-align: center;
+
 `;
 
 
@@ -61,9 +92,9 @@ export default function CardPortfolio() {
 
     return (
         <PortfolioSection>
-            <Slider {...settings} >
+            <Slider {...settings} className="slider">
                 {portfolioData.map((item) => (
-                    <div>
+                    <Width>
 
                         <ItemPortfolio >
                             <PortfolioContent>
@@ -82,7 +113,7 @@ export default function CardPortfolio() {
                                 />
                             </VideoBox>
                         </ItemPortfolio>
-                    </div>
+                    </Width>
                 ))}
 
             </Slider>

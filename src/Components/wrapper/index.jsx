@@ -56,8 +56,8 @@ export default function Wrapper() {
         <ContentWrapper>
             <StyledWrapper>
                 <Router>
-                    <Menu />
 
+                    <Menu />
                     <Routes>
                         <Route path='/' exact element={<Home />} />
                         <Route path='/skills' element={<Skills />} />

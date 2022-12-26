@@ -12,12 +12,17 @@ export const IconeTema = styled(Icone)`
 
 export const BtnTema = styled.button`
   position: absolute;
-  top: 5em;
+  top: 2em;
   right: 20px;
   background-color: ${({theme}) => theme.invert};
   border: 2px solid ${corPrimaria};
   border-radius: 50%;
   cursor: pointer;
+  z-index: 1001;
+
+  @media (min-width: 768px){
+    top: 5em;
+  }
 `;
 
 export const Box = styled.div`
@@ -32,7 +37,14 @@ export const Box = styled.div`
 
 export const Titulo = styled.h1`
   color: ${corPrimaria};
-  font-size: 3.5em;
+  padding-top: 2em;
+
+  @media (min-width: 1300px){
+    font-size: 3.5em;
+    padding-top: 0;
+  }
+  
+  font-size: 2.5em;
   text-align: center;
   text-transform: uppercase;
 
@@ -41,7 +53,12 @@ export const Titulo = styled.h1`
 
 export const SubTitulo = styled.h2`
   color: ${({theme}) => theme.text};
-  font-size: 3em;
+
+  @media (min-width: 1300px){
+    font-size: 3em;
+  }
+
+  font-size: 1.5em;
   text-align: center;
   font-weight: 500;
   text-transform: uppercase;
@@ -50,20 +67,35 @@ export const SubTitulo = styled.h2`
 `;
 
 export const TituloDiv = styled.div`
+
+  @media (min-width: 1300px){
+    margin-top: 0;
+  }
+  margin-top: 5em;
   display: flex;
   flex-direction: column;
 `;
 
 export const ContentBox = styled.div`
   display: flex;
-  flex-direction: row;
-  padding-top: 7em;
-  width: 90vh;
-  justify-content: space-around;
+  align-items: center;
+  @media (min-width: 1300px){
+    width: 90vh;
+    padding-top: 7em;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  flex-direction: column;
+  width: 90%;
 `;
 
 export const Content = styled.div`
-  width: 50%;
+  @media (min-width: 1300px){
+    width: 50%; 
+  }
+
+  display: flex;
 
 `;
 
@@ -71,6 +103,8 @@ export const Texto = styled.p`
   font-weight: 500;
   font-size: 1.5em;
   padding-top: 1em;
+  
+  text-align:center;
 
   a{
     text-decoration: none;

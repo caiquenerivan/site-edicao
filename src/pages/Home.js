@@ -6,8 +6,19 @@ import { corPrimaria } from "../Components/UI/variaveis";
 
 
 const VideoBox = styled.div`
-    width: 960px;
-    height: 540px;
+
+    width: 480px;
+    height: 270px;
+
+    @media (min-width: 768px){
+        width: 640px;
+        height: 360px;
+    }
+
+    @media (min-width: 1300px){
+        width: 960px;
+        height: 540px;
+    }
     margin-top: 2em;
     border: 5px solid ${corPrimaria};
     -webkit-box-shadow: 9px 7px 5px #F5F2F210;
@@ -16,8 +27,8 @@ const VideoBox = styled.div`
 `;
 
 
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <Box>
             <TituloDiv>
                 <Titulo>Caique Nerivan</Titulo>
@@ -25,7 +36,7 @@ export default function Home(){
             </TituloDiv>
 
             <VideoBox>
-                <ReactPlayer 
+                <ReactPlayer
                     url='https://www.youtube.com/watch?v=JocAXINz-YE&ab_channel=KendrickLamar-Topic'
                     width='100%'
                     height='100%'
